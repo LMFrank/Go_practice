@@ -11,7 +11,7 @@ func main() {
 	}
 
 	for {
-		msg := <- ch
+		msg := <-ch
 		fmt.Println(msg)
 	}
 }
