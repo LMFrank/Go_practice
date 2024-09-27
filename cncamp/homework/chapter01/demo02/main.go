@@ -18,7 +18,7 @@ const productNum = 3
 func producer(out chan<- int, nu int) {
 	for {
 		cond.L.Lock()
-		for len(out) == 3 {
+		for len(out) == productNum {
 			cond.Wait()
 		}
 		num := rand.Intn(20)
