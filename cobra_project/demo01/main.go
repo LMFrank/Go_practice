@@ -20,8 +20,8 @@ var (
 )
 
 func init() {
-	root.Flags().StringVarP(&name, "name", "", "", "姓名")
-	root.Flags().IntVar(&age, "age", 20, "年龄")
+	root.Flags().StringVarP(&name, "name", "n", "", "姓名")
+	root.Flags().IntVarP(&age, "age", "a", 20, "年龄")
 }
 
 func greeting(name string, age int) {
